@@ -12,11 +12,12 @@ tags:
  - Pr0gramm
  - Kopf
 ---
-
+Er hat etwas bei [pr0gramm][2], einer Nazi-Hitler-Communtiy geposted.
 **Steigt ihm der Fame zu Kopfe?**   
 Seht hier [pr0-post][1]  
 Diese und weitere Fragen werden hier geklärt.
 
-PS: Phillbill ist ein Lappen.
+PS: Philbill ist ein Lappen.
 
 [1]: https://pr0gramm.com/top/3540876
+[2]: https://pr0gramm.com
