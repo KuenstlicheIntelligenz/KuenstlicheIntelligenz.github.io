@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      Hallo
+title:      Bleek ist ein pr0-Opfer
 date:       2019-11-29 14:53:12
 author:     Bab
-summary:    Hallo
+summary:    Bleek ist ein pr0-Opfer
 categories: jekyll
 thumbnail:  heart
 tags:
@@ -13,6 +13,10 @@ tags:
  - noire
 ---
 
-Seht hier [pr0-post][1]
+**Steigt ihm der Fame zu Kopfe?**   
+Seht hier [pr0-post][1]  
+Diese und weitere Fragen werden hier geklärt.
+
+PS: Phillbill ist ein Lappen.
 
 [1]: https://pr0gramm.com/top/3540876
