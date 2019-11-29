@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Bleek ist ein pr0-Opfer
+title:      Das hättet ihr nie von Bleek gedacht...
 date:       2019-11-29 14:53:12
 author:     Bab
 summary:    Bleek ist ein pr0-Opfer
