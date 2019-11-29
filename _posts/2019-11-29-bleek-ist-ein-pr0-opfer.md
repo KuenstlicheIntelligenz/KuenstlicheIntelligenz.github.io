@@ -7,10 +7,10 @@ summary:    Bleek ist ein pr0-Opfer
 categories: jekyll
 thumbnail:  heart
 tags:
- - welcome
- - to
- - carte
- - noire
+ - Fame
+ - Bleek
+ - Pr0gramm
+ - Kopf
 ---
 
 **Steigt ihm der Fame zu Kopfe?**   
