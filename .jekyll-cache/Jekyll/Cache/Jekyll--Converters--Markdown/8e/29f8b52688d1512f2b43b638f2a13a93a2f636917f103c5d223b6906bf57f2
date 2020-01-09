@@ -1,0 +1,15 @@
+I"Ò<h1 id="so-far-this-is-just-for-me">So far this is just for me</h1>
+
+<ol>
+  <li>Leveraging an intermediate level of representation
+    <ul>
+      <li>Usually means to cut of the network at some layer and get the features</li>
+    </ul>
+  </li>
+  <li>Semantic information about the categories to classify
+    <ul>
+      <li>Descriptive information about the category e.g. as an numeric vector. The values of the vector describe an image.</li>
+    </ul>
+  </li>
+</ol>
+:ET
