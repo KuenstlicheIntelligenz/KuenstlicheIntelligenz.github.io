@@ -13,8 +13,6 @@ tags:
  - noire
 ---
 
-# Alessa ist nicht witzig
-
 # My trip to Asia and what not to do again
 
 ## TL/DR
