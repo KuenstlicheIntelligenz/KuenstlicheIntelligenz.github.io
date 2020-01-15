@@ -37,10 +37,11 @@ while task b suffers accuracy.)
 The paper presents a two stage solution:
 1. Prepare: Train a metric based classifier to attain discriminative features, the **Adaptable Cosine Classifier**. 
 Also use the proposed meta learning method **Amphibian**.
-2. Fine-Tune two new examples.
+2. Adapt to new examples. 
 
 
 Use mean-vectors of labled exmaples to parmetrize the cosine classifier?!
+No retraining of the classifier to avoid overfitting.
 
 
 
