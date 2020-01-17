@@ -43,6 +43,8 @@ Also use the proposed meta learning method **Amphibian**.
 Use mean-vectors of labled exmaples to parmetrize the cosine classifier?!
 No retraining of the classifier to avoid overfitting.
 
+# Cosine similarity coefficient
+
 
 
 - Leveraging an intermediate level of representation:  
