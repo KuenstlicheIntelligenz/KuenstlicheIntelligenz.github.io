@@ -65,6 +65,17 @@ feature has one weight per class. A new class means that every feature gets a ne
 
 
 
+# Amphibian - the meta learning method
+
+What is the difference to maml or reptile?
+I think for MetaLearning algos you have to think in tasks instead of dataset with label. Each task is an own Dataset and
+we want the algo to be able to quickly adapt to known dataset/task and get good results there. To quickly adapt to a dateset
+you provide the algo with examples of the task you want the algo to accomplish. That set is called the support set.
+After the algo has seen the support set, it can recognize examples from the query set. It is allowed to do one gradient
+descent step. To be versatile, the initialization parameters of the algo should be "in the middle" of the parameters
+needed for each task. So we compute the loss over all tasks that would appear for a task if we updated the paramters
+with one gradient step. And to compute the derivative over the gradient step means we do a second order gradient.
+
 
 
 - Leveraging an intermediate level of representation:  
