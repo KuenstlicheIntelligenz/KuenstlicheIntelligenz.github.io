@@ -63,6 +63,12 @@ So every
 feature has one weight per class. A new class means that every feature gets a new weight.
 
 
+# Adapt the ACC with Gradient descent?
+What is the Adaptable Cosine Classifier (ACC)?
+-> only the classifier,
+But at inference stage the feature extractor gets also adapted. With backpropagation. I guess its only on 
+the feature extrocator parameters and not on the ACC.
+
 
 
 # Amphibian - the meta learning method
@@ -76,6 +82,23 @@ descent step. To be versatile, the initialization parameters of the algo should 
 needed for each task. So we compute the loss over all tasks that would appear for a task if we updated the paramters
 with one gradient step. And to compute the derivative over the gradient step means we do a second order gradient.
 
+## Make the feature extractor Amphibian:
+We have to calculate parameters $\phi$ (our goal) such that if we change $\phi$ with one gradient step (becomming $\phi'$), the
+expected loss over the query set of a task is minimized. Or with other words, we want our parameters to be adaptable to a
+task with only one gradient step and get good results. Of course this shall work for all tasks we have. How do we do that?
+The parameters must be well adaptable by a gradient descent step for different tasks and be well within a task.
+The parameters must be well within the tasks and well adaptable with a gradient descent for different tasks.
+
+
+We minimize the expected loss over all task adaptions and minimize the loss of a single task classification.
+The calculation is divided into two loops: The *inner* and the *outer* loop. 
+1. Inner loop:
+	Calcualte paramter update, such that the parameter would be good within a task
+2. Outer loop:
+	Calculate parameter update, such that the sum of the losses
+
+	! Das hier muss ich noch mehr checken...
+	
 
 
 - Leveraging an intermediate level of representation:  
