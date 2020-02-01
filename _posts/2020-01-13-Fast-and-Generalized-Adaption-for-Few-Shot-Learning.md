@@ -14,9 +14,20 @@ tags:
 # Draft
 
 [Fast and Generalized Adaptation for Few-Shot Learning](https://arxiv.org/pdf/1911.10807v1.pdf)
+The aim of few-shot learning is to teach a classifier base knowledge and then make it able to learn 
+new categories fast and with few training examples. Like a human who understands
+a concept of an object and can recognize it under various circumstances like different lightning
+and angle, from only one or a few 2d-images.
 
-Few-Shot learning aimes to generalize to novel categories fast and with few training examples.
-Problems of conventional classifiers are weak generalization and overfitting.
+To do so, he is able to seperate the object from the Background of the 2D image, build a 3D Model of the 
+2D Object in his head and vizualise it under different lightening and positions. He infers the single
+elemnts that define and differentiates that object, like shape or color. He also makes assumptions
+about the material, the weight, the physical properties and the behavior if moved or touched or the
+sound it makes.
+
+Conventional classifiers can't be trained with only few examples. They tend to overfit and do 
+not generalize well.
+So far the focus is to work solely with the 2D image knowledge and get the best out of it.
 
 There are two approaches to solving this problem:
 1. Metric based, where the classifiers embedded space (e.g. the output of a deeper layer) is used
@@ -25,13 +36,20 @@ to find anchors for classes. To classify an example we look at the nearest ancho
 	- If retrained, prone to overfitting
 	+ Discriminative features
 2. Meta learning based, where a model is trained in a way that makes it quickly adapt to new
-training task through fine-tuning. This is done by finding a versatile parameter space where the parameters ideally lie
+training task through fine-tuning. This is done by finding a versatile parameter space where the parameters lie for example
 in the center of needed changes for new tasks (MAML Based). Therefore the amount of change to generalize to new examples would be the
-same for every new tasks, only the direction in the parameter space changes. Ideal would be only one gradient step. Another approach is
-to find a subset of parameters that needs to be updated. (MTL)
+same for every new tasks, only the direction in the parameter space changes. Ideal would be only one gradient step. 
+Another approach is to find a subset of parameters that needs to be updated. (MTL) This paper tries to find a space
+where its easy to switch on the manifold of parameter solutions from the differnt tasks.
 	- Found parameter space can be biased and therefore the generalization ability suffers. (They not lie in the center,
 therefore we would need e.g. one gradient step for task a but two for task b. If we do only one step, class a would be recognized
 while task b suffers accuracy.)
+
+They divide a network into two parts. The feature descriptor and the classifier (usually the last layer in the DNN)
+
+This paper presents the solution:
+1. Train a network with a cosine similarity loss and theire Meta learning algorithm to get a good feature desrcriptor.
+2. Swap out the classifier with the adaptable cosine classifier. Which has a close form solution to new classes without retraining.
 
 
 The paper presents a two stage solution:
