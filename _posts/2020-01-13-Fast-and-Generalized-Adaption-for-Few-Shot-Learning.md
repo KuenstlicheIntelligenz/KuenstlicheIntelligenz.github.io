@@ -45,7 +45,7 @@ No retraining of the classifier to avoid overfitting.
 
 The paper differentiates between the feature extractor and the classifier. The classifier is usually the last layer of the Neural Network
 and a fully connected layer. Each class gets a set of weights which combine the extracted features to build the class probability. 
-This is expressed through the dot product: s_k = z^Tw_k^*, where s_k is the raw classification score and k elem [1,K^*] the categories to
+This is expressed through the dot product: $$s_k = z^Tw_k^*$$, where $$s_k$$ is the raw classification score and k elem [1,K^*] the categories to
 classify. w_k is the weight vector for class k. * Means everything combined. To get the probability of
 class k, we have to use the *softmax* operator.  
 If we add a new class, we add a new weight vector. This vector will predicted and differently learned then the base categories,
@@ -53,6 +53,9 @@ because we have to learn it faster.
 The problem is, that the raw classification scores can differ in their magnitude between the base classes and the newly learned class.
 Therefore its not that easy to combine the classification for new and base classes. To deal with that problem, the paper introduces
 the cosine similarity operator, which computes the raw classification score instead of the dot product.
+
+
++ The cosine classifier preserves the class neighborhood structure in the embedding space. Means that classes which are neighboors will have a lower distance then none neighbors. TODO: why is that so?
 
 !Though: This is just scaling the weights and fitting them to the mean 
 
@@ -65,6 +68,10 @@ feature has one weight per class. A new class means that every feature gets a ne
 
 
 
+Actually there are three learning phases. The first is to train the feature extractor and the classifier with the cosine loss on the baseset. The goal is to minimize the negative log-likelihood. The next step is to swap out the weights of the classifier and replace them with calculated weights. The calculation is done by minimizing the distance of the weights to the feature vectors. As the distance metric the $$ -cos( \cdot , \cdot ) $$ is used to adapt to the first training session. (Wouldnt that change the classification?) 
+At the inference stage (third phase) the new weights vector for the new class is computed by directly solving the minimazation of the negative log-likelihood with the support set. The true underlying distribution (is never known?) of the training set will be estimated by the given samples. (1 or 5)  
+
+To finetune you would have to swap the weights of the classifier back to the ones learned before.
 
 
 - Leveraging an intermediate level of representation:  

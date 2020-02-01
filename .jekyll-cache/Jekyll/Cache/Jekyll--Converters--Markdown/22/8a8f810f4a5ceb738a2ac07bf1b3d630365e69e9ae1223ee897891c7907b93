@@ -1,0 +1,19 @@
+I"©<h1 id="so-far-this-is-just-for-me">So far this is just for me</h1>
+
+<ul>
+  <li>
+    <p>Leveraging an intermediate level of representation:<br />
+___
+  Usually means to cut of the network at some layer and get the features</p>
+  </li>
+  <li>
+    <p>Semantic information about the categories to classify:<br />
+  Descriptive information about the category e.g. as an numeric vector. The values of the vector describe an image.</p>
+  </li>
+</ul>
+
+<p>Kann ich mal testen wie das hier funktioniert. Wir r√ºcke ich denn ein?</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Just with tab ```python import os test = 1 ```
+</code></pre></div></div>
+:ET
