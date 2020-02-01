@@ -66,12 +66,46 @@ So every
 feature has one weight per class. A new class means that every feature gets a new weight.
 
 
+# Adapt the ACC with Gradient descent?
+What is the Adaptable Cosine Classifier (ACC)?
+-> only the classifier,
+But at inference stage the feature extractor gets also adapted. With backpropagation. I guess its only on 
+the feature extrocator parameters and not on the ACC.
 
 
 Actually there are three learning phases. The first is to train the feature extractor and the classifier with the cosine loss on the baseset. The goal is to minimize the negative log-likelihood. The next step is to swap out the weights of the classifier and replace them with calculated weights. The calculation is done by minimizing the distance of the weights to the feature vectors. As the distance metric the $$ -cos( \cdot , \cdot ) $$ is used to adapt to the first training session. (Wouldnt that change the classification?) 
 At the inference stage (third phase) the new weights vector for the new class is computed by directly solving the minimazation of the negative log-likelihood with the support set. The true underlying distribution (is never known?) of the training set will be estimated by the given samples. (1 or 5)  
 
 To finetune you would have to swap the weights of the classifier back to the ones learned before.
+
+# Amphibian - the meta learning method
+
+What is the difference to maml or reptile?
+I think for MetaLearning algos you have to think in tasks instead of dataset with label. Each task is an own Dataset and
+we want the algo to be able to quickly adapt to known dataset/task and get good results there. To quickly adapt to a dateset
+you provide the algo with examples of the task you want the algo to accomplish. That set is called the support set.
+After the algo has seen the support set, it can recognize examples from the query set. It is allowed to do one gradient
+descent step. To be versatile, the initialization parameters of the algo should be "in the middle" of the parameters
+needed for each task. So we compute the loss over all tasks that would appear for a task if we updated the paramters
+with one gradient step. And to compute the derivative over the gradient step means we do a second order gradient.
+
+## Make the feature extractor Amphibian:
+We have to calculate parameters $\phi$ (our goal) such that if we change $\phi$ with one gradient step (becomming $\phi'$), the
+expected loss over the query set of a task is minimized. Or with other words, we want our parameters to be adaptable to a
+task with only one gradient step and get good results. Of course this shall work for all tasks we have. How do we do that?
+The parameters must be well adaptable by a gradient descent step for different tasks and be well within a task.
+The parameters must be well within the tasks and well adaptable with a gradient descent for different tasks.
+
+
+We minimize the expected loss over all task adaptions and minimize the loss of a single task classification.
+The calculation is divided into two loops: The *inner* and the *outer* loop. 
+1. Inner loop:
+	Calcualte paramter update, such that the parameter would be good within a task
+2. Outer loop:
+	Calculate parameter update, such that the sum of the losses
+
+	! Das hier muss ich noch mehr checken...
+	
 
 
 - Leveraging an intermediate level of representation:  
