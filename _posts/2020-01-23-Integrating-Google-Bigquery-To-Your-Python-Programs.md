@@ -13,7 +13,14 @@ tags:
  - Python
 ---
 
+# If you've worked with SQL Alchemy
+
 # Draft
+
+# Differences to (MS)SQL
+SQL | BigQuery
+engine | client
+
 
 # Summary
 I wanted to integrate Google Cloud Bigquery in my python programs. Usually i need the following functions:

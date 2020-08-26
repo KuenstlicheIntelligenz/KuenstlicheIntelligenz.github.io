@@ -1,0 +1,1 @@
+1. Why not use a larger kernel size in cnns?
