@@ -1,0 +1,15 @@
+I"<h1 id="datasets">Datasets</h1>
+<p>Command | Action</p>
+
+<h1 id="general">General</h1>
+<p>Command | Action</p>
+
+<h1 id="query">Query</h1>
+<p>Command | Action</p>
+
+<h1 id="table">Table</h1>
+<p>Command | Action
+bq mk | create a table
+bq rm -t dataset.table | remove a table (-t)</p>
+
+:ET

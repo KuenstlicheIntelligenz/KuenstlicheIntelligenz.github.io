@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      2020-01-23-Integrating-Google-Bigquery-To-Your-Python-Programs
+title:      Python Cheat Sheet
 date:       2020-01-23 09:53:19
 author:     Bab
 summary:    Pyton Bigquery Integration

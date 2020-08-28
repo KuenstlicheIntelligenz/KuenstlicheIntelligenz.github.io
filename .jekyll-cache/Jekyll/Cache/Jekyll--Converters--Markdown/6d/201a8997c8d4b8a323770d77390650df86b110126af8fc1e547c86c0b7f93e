@@ -1,0 +1,26 @@
+I"�<p><strong>Work in progress</strong></p>
+
+<h1 id="why-dont-we-use-mean-and-max-pooling">Why don’t we use Mean and Max Pooling?</h1>
+<p>IDEA: Probably cause the feature vector would be to long. -&gt; GeM
+But what about using both and doing an autoencoder on it, the network could select and weight each
+feature on its own.</p>
+
+<h1 id="why-do-we-use-2d-3x3-convolutional-filter-on-the-first-3-rgb-channels">Why do we use 2d 3x3 convolutional filter on the first 3 rgb channels?</h1>
+
+<h1 id="why-dont-we-have-color-invariant-features-or-have-to-learn-them">Why don’t we have color invariant features, or have to learn them?</h1>
+<p>Has humans we can recognize a wasp in a picture, no matter in what colors it is shown.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"><img src="/assets/images/wasp.jpg" alt="space-1.jpg" /></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><em>Space</em></td>
+    </tr>
+  </tbody>
+</table>
+
+:ET
