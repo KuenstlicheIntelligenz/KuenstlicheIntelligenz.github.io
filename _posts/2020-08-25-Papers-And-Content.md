@@ -31,8 +31,12 @@ Generalized-mean (GeM) pooling.
 
 # Mixed Pooling
 [![Paper](http://img.shields.io/badge/paper-arXiv.1509.06033-B3181B.svg)](https://arxiv.org/pdf/1509.06033)
-Illustration of semantic information captured by each feature map of pool5 layer using CNN
 
+
+# Comparison of mean, max and hybrid(both) pooling
+[![Paper](http://img.shields.io/badge/paper-arXiv.1509.06033-B3181B.svg)](https://arxiv.org/pdf/1509.06033.pdf)
+Illustration of semantic information captured by each feature map of pool5 layer using CNN
+-> Mean pooling is better then just concat mean and max (hybrid)
 
 
 

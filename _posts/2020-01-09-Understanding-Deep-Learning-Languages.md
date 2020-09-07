@@ -11,6 +11,29 @@ tags:
  - Deep Learning
 ---
 
+# SOD - Salient object detection
+> Salient object detection is a task based on a visual attention mechanism, 
+> in which algorithms aim to explore objects or regions more attentive than the surrounding areas on the scene or images.
+"paperswithcode.com"
+
+
+# Pooling
+Using mean or max pooling to gain translational invariance over the pooled reagion.
+For image retrieval max < mean < gem
+
+## Max Pooling - MAC
+More invariant to scale change because the max will not change with scale. But more affected by distractors ( a car which
+is not needed for scene reconstruction )
+
+## Mean pooling
+Not so sensitive to distractors but suffers from scale change
+
+# R-MAC 
+Define multiple regions for feature maps and take the max.  
+
+
+
+
 # So far this is just for me
 
 - Leveraging an intermediate level of representation:  
