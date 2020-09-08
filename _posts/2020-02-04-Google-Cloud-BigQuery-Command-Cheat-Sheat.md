@@ -24,4 +24,5 @@ Command | Action
 Command | Action
 bq mk | create a table
 bq rm -t dataset.table | remove a table (-t)
+bq ls dataset | list tables in dataset
 
