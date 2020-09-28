@@ -39,6 +39,8 @@ Train it with slight rotation, then get features for 0, 90, 180, 270 degrees
 
 # Can we somhow penalize sparsity in DNNs?
 
+# Train using contrastive loss or categorical loss?
+
 
 
 
