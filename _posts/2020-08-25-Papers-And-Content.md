@@ -39,5 +39,31 @@ Illustration of semantic information captured by each feature map of pool5 layer
 -> Mean pooling is better then just concat mean and max (hybrid)
 
 
+# Combination of Multiple Global Descriptors for Image Retrieval
+[![Paper](http://img.shields.io/badge/paper-arXiv.1903.10663-B3181B.svg)](https://arxiv.org/pdf/1903.10663.pdf)
+
+# Graph Neural Networks:A Review of Methods and Applications
+[![Paper](http://img.shields.io/badge/paper-arXiv.1812.08434-B3181B.svg)](https://arxiv.org/pdf/1812.08434.pdf)
+
+# Self-Correction for Human Parsing
+[![Paper](http://img.shields.io/badge/paper-arXiv.1910.09777-B3181B.svg)](https://arxiv.org/pdf/1910.09777v1.pdf)
+
+# YOLOv4: Optimal Speed and Accuracy of Object Detection
+[![Paper](http://img.shields.io/badge/paper-arXiv.2004.10934v1-B3181B.svg)](https://arxiv.org/pdf/2004.10934v1.pdf)
+
+Yolo wants to reduce model size and inference speed while keeping accuracy high.
+
+## Bag of freebies (only cost training time)
+Augmentation, solving dataset bias (imbalance), better loss
+
+## Bag of specials (small inference cost, significantly improvement in accuracy)
+Enhance receptive field, attention - channelwise (squeeze-and-excitiation (SE)) - pointwise 
+(Spatial Attention Module (SAM))
+-> SE ist costly on gpu
+-> SAM makes improvement and is efficient on gpu
+Multi-scale prediction methods, Activationfunctions, Post-processing methods like nms (not needed in anchor-free
+(without x1, x2, y1, y2) methods)
+
+
 
 

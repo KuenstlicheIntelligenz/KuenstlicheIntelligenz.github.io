@@ -43,16 +43,21 @@ $$ \chi_k $$
 be the set of $$ W \times H $$ activations for feature map $$ k \in{\{1...K\}} $$ . Each point on a feature map has a receptive field 
 on the original image and if its pixel is activated, its indicating the presence of that feature in that receptive field. We use
 all channels from a pixel on a feature map as a local descriptor/feature. 
-![](/assets/images/cnn_for_delf_desc.png)
 
-To reduce the size of the local feature vector, an autoencoder gets employed in Delg.
+<img src="/assets/images/cnn_for_delf_desc.png" alt="drawing" width="800"/>
+
+To reduce the size of the local feature vector, an autoencoder gets employed in Delg. At the end the vector gets l2-normalized.
+<br><br>
+
+### l2-normalization
+What does it mean to l2-regularize here?
 
 ## Global feature
 
 For the global feature vector we employ **Generalized-Mean (GeM) pooling** on the deeper output of the CNN with the aim
 to reduce each feature map to one single number (global pooling).
 To understand this ill quickly remind you of the pooling methods.
-
+<br><br>
 ### Global Max Pooling
 
 There is **global max pooling (MAC)** given by:
@@ -62,7 +67,7 @@ f^{m}=[f_1^{m} ... f_k^{m} .. f_K^{m}]^T, f_k^{m} = \max_{x \in \chi_k} x
 Max pooling on a feature map results in a number, indicating how present the feature is anywhere on the featuremap. If you
 keep the location of the max you can tell where the feature is present on the image by the receptive field.
 We implicitly compare one image patch.
-
+<br><br>
 ### Global Mean Pooling
 
 There is **average pooling (SPoC)** given by:
@@ -91,6 +96,7 @@ Basically PCA + normalize the PCA Data.
 Results in that all dimensions get equal contributions. Noise gets attenuated!
 Whitening is only done on the train set! The validation data gets preprocessed with
 the from training inferred parameters.
+whitening downweights co-occurences of local features, which isgenerally beneficial for retrieval applications [here](https://hal.inria.fr/hal-00722622v2/document)
 
 
 
@@ -130,6 +136,11 @@ we normalize the weights and the feature beforehand
 # Softplus activation
 Softplus is always positive and ranges from 0 to infinity. Its a smooth function and its differntiable at x = 0.
 ReLU is more efficient to calculate
+
+# Receptive fields
+
+I recommend reading [this](https://medium.com/mlreview/a-guide-to-receptive-field-arithmetic-for-convolutional-neural-networks-e0f514068807).
+
 
 # Q&A
 
