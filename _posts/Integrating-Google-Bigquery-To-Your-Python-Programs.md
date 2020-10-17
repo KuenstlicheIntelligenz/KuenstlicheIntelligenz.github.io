@@ -32,3 +32,7 @@ table_insert(row) # What about costs?
 # What about costs?
 
 dry_run -> Estimate the queried mb to determine the costs.
+
+# Easiest way to get a table as a pandas df
+```python
+

@@ -38,6 +38,13 @@ Generalized-mean (GeM) pooling.
 Illustration of semantic information captured by each feature map of pool5 layer using CNN
 -> Mean pooling is better then just concat mean and max (hybrid)
 
+# Retrieving Similar E-Commerce Images Using Deep Learning
+
+- Siamese architecture (2 images?), angular loss, combination of low and toplevel,
+fractional distance matrix to calc distance between features
+
+- Manhatten distance matrix provides the best discrimination in high dimensional data spaces.
+L_k norm with k smaller then 1
 
 # Combination of Multiple Global Descriptors for Image Retrieval
 [![Paper](http://img.shields.io/badge/paper-arXiv.1903.10663-B3181B.svg)](https://arxiv.org/pdf/1903.10663.pdf)
