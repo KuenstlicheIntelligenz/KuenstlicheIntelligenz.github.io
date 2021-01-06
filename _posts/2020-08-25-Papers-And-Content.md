@@ -18,8 +18,8 @@ tags:
 
 # Paper
 DELF:
-
    [Large-Scale Image Retrieval with Attentive Deep Local Features](https://arxiv.org/abs/1612.06321)
+
       Image similarity based on learned local feature extraction
 [![Paper](http://img.shields.io/badge/paper-arXiv.1612.06321-B3181B.svg)](https://arxiv.org/abs/1612.06321)
 
