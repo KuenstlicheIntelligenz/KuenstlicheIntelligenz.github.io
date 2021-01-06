@@ -11,6 +11,14 @@ tags:
  - Deep Learning
 ---
 
+# NLP
+- Tokenization: Split text into individual text building blocks ( words, punctation, ...) after specialized rules.
+- Tagging: Like in school, tag the words as nouns or verbs and it dependencies ( what is doing something in a sentence 
+with subject object and verb)
+- Lemmatization: Get the base form of a word
+- Named Entities: Understanding that a name might be referring to a company ( e.g. Apple can mean the fruit or the company )
+- Word vectors and similarity: Generate a multidimensional vector for a word which allows the word to be compared to another word.
+
 # SOD - Salient object detection
 > Salient object detection is a task based on a visual attention mechanism, 
 > in which algorithms aim to explore objects or regions more attentive than the surrounding areas on the scene or images.
@@ -28,9 +36,12 @@ is not needed for scene reconstruction )
 ## Mean pooling
 Not so sensitive to distractors but suffers from scale change
 
-# R-MAC 
+## R-MAC 
 Define multiple regions for feature maps and take the max.  
 
+# Dealing with data imbalance
+
+## Focal loss
 
 
 
