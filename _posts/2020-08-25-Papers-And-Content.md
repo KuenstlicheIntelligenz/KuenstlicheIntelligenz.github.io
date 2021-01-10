@@ -15,17 +15,41 @@ tags:
 
 **Work in progress**
 
+<p>&nbsp;</p>
 
-# Paper
-DELF:
-   [Large-Scale Image Retrieval with Attentive Deep Local Features](https://arxiv.org/abs/1612.06321)
-   Image similarity based on learned local feature extraction
+## SAM: Sharpness-Aware Minimization for Efficiently ImprovingGeneralization
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2010.01412v2-B3181B.svg)](https://arxiv.org/pdf/2010.01412v2.pdf)
+
+Optimize the network for a flat (unsharp) minima. Improves generalization and robustness to label noise.
 
 ---
+
+## DELG: Unifying Deep Local and Global Features for Image Search
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2001.05027-B3181B.svg)](https://arxiv.org/abs/2001.05027)
+
+Image similarity and retrieval. Uses an image pyramid and GeM.
+
+---
+
+## Combination of Multiple Global Descriptors for Image Retrieval
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.1903.10663-B3181B.svg)](https://arxiv.org/pdf/1903.10663.pdf)
+
+Image similarity. Use SPoc Mac and GeM as pooling method for features and combines them.
+
+---
+
+## DELF: Large-Scale Image Retrieval with Attentive Deep Local Features
+
 [![Paper](http://img.shields.io/badge/paper-arXiv.1612.06321-B3181B.svg)](https://arxiv.org/abs/1612.06321)
 
-DELG:
-[![Paper](http://img.shields.io/badge/paper-arXiv.2001.05027-B3181B.svg)](https://arxiv.org/abs/2001.05027)
+Predecessor of DELG 
+Image similarity based on learned local feature extraction
+
+---
+
 
 
 # GeM
@@ -50,23 +74,7 @@ fractional distance matrix to calc distance between features
 - Manhatten distance matrix provides the best discrimination in high dimensional data spaces.
 L_k norm with k smaller then 1
 
-# Combination of Multiple Global Descriptors for Image Retrieval
-[![Paper](http://img.shields.io/badge/paper-arXiv.1903.10663-B3181B.svg)](https://arxiv.org/pdf/1903.10663.pdf)
 
-Instead of using multiple models for image retrival, which has shown to improve performance, this
-paper aims to get multiple outputs of a single model and combine them to have a similar ensemble effect.
-Basically they combine SPoC, Mac and GeM as pooling methods before the final layers in the network.
-Rember SPoC deals with larger regions, Mac focuses on smaller details in the image.
-
-Additionally used is label smoothing and temperature scaling. What is this?
-
-"The temperature scaling with low-temperature parameterτin the Equation 4,  assigns a larger gradient
- to more chal-lenging  examples  and  is  helpful  for  intra-class  compact,and inter-class spread-out embedding."
-What does that mean?
-
-"The label smooth-ing enhances a model, thereby improves generalization by
-estimating the marginalized effect of a label-dropout duringtraining. Therefore, to prevent over-fitting,
- and learn betterembedding, we add label smoothing and temperature scal-ing in the auxiliary classification loss"
 
 
 # Graph Neural Networks:A Review of Methods and Applications

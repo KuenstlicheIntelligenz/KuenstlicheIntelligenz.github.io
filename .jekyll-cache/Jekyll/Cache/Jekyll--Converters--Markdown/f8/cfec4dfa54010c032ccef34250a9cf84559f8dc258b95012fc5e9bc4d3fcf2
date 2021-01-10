@@ -1,4 +1,4 @@
-I"Ë<p><strong>Work in progress</strong></p>
+I"=<p><strong>Work in progress</strong></p>
 
 <h1 id="why-dont-we-use-mean-and-max-pooling">Why donâ€™t we use Mean and Max Pooling?</h1>
 <p>IDEA: Probably cause the feature vector would be to long. -&gt; GeM
@@ -36,5 +36,7 @@ https://arxiv.org/pdf/1509.06033.pdf
 <p>Train it with slight rotation, then get features for 0, 90, 180, 270 degrees</p>
 
 <h1 id="can-we-somhow-penalize-sparsity-in-dnns">Can we somhow penalize sparsity in DNNs?</h1>
+
+<h1 id="train-using-contrastive-loss-or-categorical-loss">Train using contrastive loss or categorical loss?</h1>
 
 :ET

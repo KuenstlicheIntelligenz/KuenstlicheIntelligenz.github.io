@@ -1,0 +1,17 @@
+I"P<p><strong>Work in progress</strong></p>
+
+<ol>
+  <li>
+    <p>Reduce learning Rate and Momentum</p>
+  </li>
+  <li>
+    <p>Use <a href="https://arxiv.org/pdf/1810.12890.pdf">DropBlock</a> as Regularization Method</p>
+  </li>
+  <li>
+    <p>Use Self-Adversarial Training</p>
+  </li>
+  <li>
+    <p>Mosaic data augmentation</p>
+  </li>
+</ol>
+:ET

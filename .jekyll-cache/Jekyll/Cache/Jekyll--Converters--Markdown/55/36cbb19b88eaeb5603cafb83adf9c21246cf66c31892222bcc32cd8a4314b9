@@ -1,4 +1,14 @@
-I"C<h1 id="sod---salient-object-detection">SOD - Salient object detection</h1>
+I"4	<h1 id="nlp">NLP</h1>
+<ul>
+  <li>Tokenization: Split text into individual text building blocks ( words, punctation, …) after specialized rules.</li>
+  <li>Tagging: Like in school, tag the words as nouns or verbs and it dependencies ( what is doing something in a sentence 
+with subject object and verb)</li>
+  <li>Lemmatization: Get the base form of a word</li>
+  <li>Named Entities: Understanding that a name might be referring to a company ( e.g. Apple can mean the fruit or the company )</li>
+  <li>Word vectors and similarity: Generate a multidimensional vector for a word which allows the word to be compared to another word.</li>
+</ul>
+
+<h1 id="sod---salient-object-detection">SOD - Salient object detection</h1>
 <blockquote>
   <p>Salient object detection is a task based on a visual attention mechanism, 
 in which algorithms aim to explore objects or regions more attentive than the surrounding areas on the scene or images.
@@ -16,8 +26,12 @@ is not needed for scene reconstruction )</p>
 <h2 id="mean-pooling">Mean pooling</h2>
 <p>Not so sensitive to distractors but suffers from scale change</p>
 
-<h1 id="r-mac">R-MAC</h1>
+<h2 id="r-mac">R-MAC</h2>
 <p>Define multiple regions for feature maps and take the max.</p>
+
+<h1 id="dealing-with-data-imbalance">Dealing with data imbalance</h1>
+
+<h2 id="focal-loss">Focal loss</h2>
 
 <h1 id="so-far-this-is-just-for-me">So far this is just for me</h1>
 

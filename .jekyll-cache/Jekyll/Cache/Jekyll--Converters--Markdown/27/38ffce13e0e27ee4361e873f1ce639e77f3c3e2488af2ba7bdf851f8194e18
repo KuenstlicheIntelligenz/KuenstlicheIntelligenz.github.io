@@ -1,4 +1,4 @@
-I"<h1 id="datasets">Datasets</h1>
+I"A<h1 id="datasets">Datasets</h1>
 <p>Command | Action</p>
 
 <h1 id="general">General</h1>
@@ -10,6 +10,7 @@
 <h1 id="table">Table</h1>
 <p>Command | Action
 bq mk | create a table
-bq rm -t dataset.table | remove a table (-t)</p>
+bq rm -t dataset.table | remove a table (-t)
+bq ls dataset | list tables in dataset</p>
 
 :ET
