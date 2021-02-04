@@ -17,6 +17,20 @@ tags:
 
 <p>&nbsp;</p>
 
+## In Defense of the Triplet Loss for Person Re-Identification
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.1703.07737-B3181B.svg)](https://arxiv.org/pdf/1703.07737.pdf)
+
+---
+
+## Combination of Multiple Global Descriptors for Image Retrieval
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.1903.10663-B3181B.svg)](https://arxiv.org/pdf/1903.10663.pdf)
+
+Image similarity. Use SPoc Mac and GeM for pooling features and combines them.
+
+---
+
 ## SoftPool: Refining activation downsampling with SoftPool
 
 [![Paper](http://img.shields.io/badge/paper-arXiv.2101.00440v2-B3181B.svg)](https://arxiv.org/pdf/2101.00440v2.pdf)
@@ -38,14 +52,6 @@ Optimize the network for a flat (unsharp) minima. Improves generalization and ro
 [![Paper](http://img.shields.io/badge/paper-arXiv.2001.05027-B3181B.svg)](https://arxiv.org/abs/2001.05027)
 
 Image similarity and retrieval. Uses an image pyramid and GeM.
-
----
-
-## Combination of Multiple Global Descriptors for Image Retrieval
-
-[![Paper](http://img.shields.io/badge/paper-arXiv.1903.10663-B3181B.svg)](https://arxiv.org/pdf/1903.10663.pdf)
-
-Image similarity. Use SPoc Mac and GeM for pooling features and combines them.
 
 ---
 

@@ -11,6 +11,23 @@ tags:
  - Deep Learning
 ---
 
+
+Instead of using multiple models for image retrival, which has shown to improve performance, this
+paper aims to get multiple outputs of a single model and combine them to have a similar ensemble effect.
+Basically they combine SPoC, Mac and GeM as pooling methods before the final layers in the network.
+Rember SPoC deals with larger regions, Mac focuses on smaller details in the image.
+
+Additionally used is label smoothing and temperature scaling. What is this?
+
+"The temperature scaling with low-temperature parameterτin the Equation 4,  assigns a larger gradient
+ to more chal-lenging  examples  and  is  helpful  for  intra-class  compact,and inter-class spread-out embedding."
+What does that mean?
+
+"The label smooth-ing enhances a model, thereby improves generalization by
+estimating the marginalized effect of a label-dropout duringtraining. Therefore, to prevent over-fitting,
+ and learn betterembedding, we add label smoothing and temperature scal-ing in the auxiliary classification loss"
+ 
+
 # NLP
 - Tokenization: Split text into individual text building blocks ( words, punctation, ...) after specialized rules.
 - Tagging: Like in school, tag the words as nouns or verbs and it dependencies ( what is doing something in a sentence 

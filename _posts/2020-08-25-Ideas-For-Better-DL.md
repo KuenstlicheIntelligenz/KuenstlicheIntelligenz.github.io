@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Papers and Content
+title:      Ideas for better DL
 date:       2020-08-25 15:31:19
 author:     Bab
 summary:    Explain modules of Delf and Delg Algorithm
