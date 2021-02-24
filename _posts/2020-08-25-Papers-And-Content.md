@@ -17,6 +17,13 @@ tags:
 
 <p>&nbsp;</p>
 
+## In Defense of the Triplet Loss Again: Learning Robust Person Re-Identificationwith Fast Approximated Triplet Loss and Label Distillation
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.1912.07863-B3181B.svg)](https://arxiv.org/pdf/1912.07863.pdf)
+
+---
+
+
 ## In Defense of the Triplet Loss for Person Re-Identification
 
 [![Paper](http://img.shields.io/badge/paper-arXiv.1703.07737-B3181B.svg)](https://arxiv.org/pdf/1703.07737.pdf)
@@ -29,7 +36,19 @@ tags:
 
 Image similarity. Use SPoc Mac and GeM for pooling features and combines them.
 
+[Code](https://github.com/PuchatekwSzortach/combination_of_multiple_global_descriptors_for_image_retrieval) with additional ideas (Keras Tensorflow)
+
 ---
+
+## High-Performance Large-Scale Image Recognition Without Normalization
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2102.06171v1-B3181B.svg)](https://arxiv.org/pdf/2102.06171v1.pdf)
+
+Getting rid of Batchnormalization.
+Better results then efficientnet while beeing faster.
+
+---
+
 
 ## SoftPool: Refining activation downsampling with SoftPool
 
