@@ -11,8 +11,9 @@ title_image: "https://www.gravatar.com/avatar/00000000000000000000000000000000?s
 #github_repository: https://github.com/jacobtomlinson/carte-noire
 #addthis_id: ra-513c6fa83da6ec67
 post_limit: 5
+paginate: 5
 
-# Social usernames/URLs
+# _social usernames/URLs
 #twitter_username: _jacobtomlinson
 github_username:  KuenstlicheIntelligenz
 #instagram_username:
@@ -36,6 +37,10 @@ kramdown:
 
 permalink: pretty
 exclude: [vendor]
+
+collections:
+  social:
+    output: true
 
 defaults:
   - 

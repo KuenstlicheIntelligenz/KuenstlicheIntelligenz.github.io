@@ -1,4 +1,4 @@
-I"x<p><strong>Work in progress</strong></p>
+I"�<p><strong>Work in progress</strong></p>
 
 <p>I’ll try to give a summary over the components of Delf and Delg</p>
 
@@ -23,8 +23,8 @@ example we use the output of <em>conv4</em> from ResNet50 and the output of <em>
 
 <h2 id="local-features">Local features</h2>
 <p>Let 
-<script type="math/tex">\chi_k</script> 
-be the set of <script type="math/tex">W \times H</script> activations for feature map <script type="math/tex">k \in{\{1...K\}}</script> . Each point on a feature map has a receptive field 
+\(\chi_k\) 
+be the set of \(W \times H\) activations for feature map \(k \in{\{1...K\}}\) . Each point on a feature map has a receptive field 
 on the original image and if its pixel is activated, its indicating the presence of that feature in that receptive field. We use
 all channels from a pixel on a feature map as a local descriptor/feature.</p>
 
@@ -66,7 +66,7 @@ Mean pooling describes how often and how strong a feature is present in the imag
 \begin{equation}
 f^{g}=[f_1^{g}…f_k^{g}…f_K^{g}]^T, f_k^{g} = ( \frac{1}{|\chi_k|} \sum_{x \in \chi_k} x^{p_k})^{ \frac{1}{p_k}}
 \end{equation}
-where the pooling parameter <script type="math/tex">p_k</script> can be manually set or learned. A large <script type="math/tex">p</script> would amplify single entries and
+where the pooling parameter \(p_k\) can be manually set or learned. A large \(p\) would amplify single entries and
 the operation would resemble max pooling. <br />
 GeM pooling shows <strong>better results</strong> then mean or max pooling.</p>
 
@@ -95,20 +95,20 @@ does not optimize for diversity for inter-class samples.
 We want something that puts together objects of the same class and put a large boundary between objects of different classes.
 ArcFace helps, it is easy to implement, has low computational overhad and good convergence properties.</p>
 
-<p>Consider the last two layers <script type="math/tex">i</script> and <script type="math/tex">j</script> of the CNN (Dense layers). 
-Layer <script type="math/tex">i</script> has <script type="math/tex">d = 512</script> outputs, subsequent layer <script type="math/tex">j</script> has <script type="math/tex">n</script> output units.
-So we have <script type="math/tex">W \in R^{d \times n}</script> weights to compute
-the output of the last layer. <script type="math/tex">x_i</script> is the output of the first layer.
-Instead of directly computing the logits as <script type="math/tex">W_j^T x_i</script> we use the formula 
+<p>Consider the last two layers \(i\) and \(j\) of the CNN (Dense layers). 
+Layer \(i\) has \(d = 512\) outputs, subsequent layer \(j\) has \(n\) output units.
+So we have \(W \in R^{d \times n}\) weights to compute
+the output of the last layer. \(x_i\) is the output of the first layer.
+Instead of directly computing the logits as \(W_j^T x_i\) we use the formula 
 \begin{equation}
 W_j^T x_i = |W_j| |x_i| \cos{\theta_j}
-\end{equation} from which we want to get <script type="math/tex">\theta</script>. So we need to caluclate <script type="math/tex">\frac{W_j}{|W_j|}</script>,
-<script type="math/tex">\frac{x_i}{|x_i|}</script> and take the <script type="math/tex">\arccos</script> to get <script type="math/tex">\theta</script>.<br />
-The parameter of the ArcFace, the additative margin penalty <script type="math/tex">m</script> gets added to <script type="math/tex">\theta</script>.
+\end{equation} from which we want to get \(\theta\). So we need to caluclate \(\frac{W_j}{|W_j|}\),
+\(\frac{x_i}{|x_i|}\) and take the \(\arccos\) to get \(\theta\).<br />
+The parameter of the ArcFace, the additative margin penalty \(m\) gets added to \(\theta\).
 The higher theta… todo</p>
 
 <p>Here we add the additative 
-margin penalty <script type="math/tex">m</script>. There are also SphereFace which multiplacative angular margin and CosFace with additive cosine
+margin penalty \(m\). There are also SphereFace which multiplacative angular margin and CosFace with additive cosine
 margin. 
 Ganz hab ich noch nicht verstanden. Man nutzt arcface nur wenn in bestimmten winkeln.</p>
 

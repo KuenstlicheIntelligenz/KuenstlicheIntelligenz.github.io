@@ -1,0 +1,69 @@
+I"B<p>Instead of using multiple models for image retrival, which has shown to improve performance, this
+paper aims to get multiple outputs of a single model and combine them to have a similar ensemble effect.
+Basically they combine SPoC, Mac and GeM as pooling methods before the final layers in the network.
+Rember SPoC deals with larger regions, Mac focuses on smaller details in the image.</p>
+
+<p>Additionally used is label smoothing and temperature scaling. What is this?</p>
+
+<p>“The temperature scaling with low-temperature parameterτin the Equation 4,  assigns a larger gradient
+ to more chal-lenging  examples  and  is  helpful  for  intra-class  compact,and inter-class spread-out embedding.”
+What does that mean?</p>
+
+<p>“The label smooth-ing enhances a model, thereby improves generalization by
+estimating the marginalized effect of a label-dropout duringtraining. Therefore, to prevent over-fitting,
+ and learn betterembedding, we add label smoothing and temperature scal-ing in the auxiliary classification loss”</p>
+
+<h1 id="nlp">NLP</h1>
+<ul>
+  <li>Tokenization: Split text into individual text building blocks ( words, punctation, …) after specialized rules.</li>
+  <li>Tagging: Like in school, tag the words as nouns or verbs and it dependencies ( what is doing something in a sentence 
+with subject object and verb)</li>
+  <li>Lemmatization: Get the base form of a word</li>
+  <li>Named Entities: Understanding that a name might be referring to a company ( e.g. Apple can mean the fruit or the company )</li>
+  <li>Word vectors and similarity: Generate a multidimensional vector for a word which allows the word to be compared to another word.</li>
+</ul>
+
+<h1 id="sod---salient-object-detection">SOD - Salient object detection</h1>
+<blockquote>
+  <p>Salient object detection is a task based on a visual attention mechanism, 
+in which algorithms aim to explore objects or regions more attentive than the surrounding areas on the scene or images.
+“paperswithcode.com”</p>
+</blockquote>
+
+<h1 id="pooling">Pooling</h1>
+<p>Using mean or max pooling to gain translational invariance over the pooled reagion.
+For image retrieval max &lt; mean &lt; gem</p>
+
+<h2 id="max-pooling---mac">Max Pooling - MAC</h2>
+<p>More invariant to scale change because the max will not change with scale. But more affected by distractors ( a car which
+is not needed for scene reconstruction )</p>
+
+<h2 id="mean-pooling">Mean pooling</h2>
+<p>Not so sensitive to distractors but suffers from scale change</p>
+
+<h2 id="r-mac">R-MAC</h2>
+<p>Define multiple regions for feature maps and take the max.</p>
+
+<h1 id="dealing-with-data-imbalance">Dealing with data imbalance</h1>
+
+<h2 id="focal-loss">Focal loss</h2>
+
+<h1 id="so-far-this-is-just-for-me">So far this is just for me</h1>
+
+<ul>
+  <li>
+    <p>Leveraging an intermediate level of representation:<br />
+___
+  Usually means to cut of the network at some layer and get the features</p>
+  </li>
+  <li>
+    <p>Semantic information about the categories to classify:<br />
+  Descriptive information about the category e.g. as an numeric vector. The values of the vector describe an image.</p>
+  </li>
+</ul>
+
+<p>Kann ich mal testen wie das hier funktioniert. Wir rücke ich denn ein?</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Just with tab ```python import os test = 1 ```
+</code></pre></div></div>
+:ET
