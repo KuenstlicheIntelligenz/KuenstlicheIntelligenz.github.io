@@ -17,6 +17,12 @@ tags:
 
 <p>&nbsp;</p>
 
+## Hard-Aware Point-to-Set Deep Metric forPerson Re-identification
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.1807.11206-B3181B.svg)](https://arxiv.org/pdf/1807.11206.pdf)
+
+---
+
 ## In Defense of the Triplet Loss Again: Learning Robust Person Re-Identificationwith Fast Approximated Triplet Loss and Label Distillation
 
 [![Paper](http://img.shields.io/badge/paper-arXiv.1912.07863-B3181B.svg)](https://arxiv.org/pdf/1912.07863.pdf)
