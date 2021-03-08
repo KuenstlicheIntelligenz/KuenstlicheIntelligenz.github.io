@@ -17,6 +17,12 @@ tags:
 
 <p>&nbsp;</p>
 
+## Shop The Look: Building a Large Scale Visual Shopping Systemat Pinterest
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2006.10866-B3181B.svg)](https://arxiv.org/pdf/2006.10866.pdf)
+
+---
+
 ## Hard-Aware Point-to-Set Deep Metric forPerson Re-identification
 
 [![Paper](http://img.shields.io/badge/paper-arXiv.1807.11206-B3181B.svg)](https://arxiv.org/pdf/1807.11206.pdf)
