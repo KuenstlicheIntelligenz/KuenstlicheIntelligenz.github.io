@@ -17,6 +17,36 @@ tags:
 
 <p>&nbsp;</p>
 
+## Destruction and Construction Learning for Fine-grained Image Recognition
+
+[Paper Link](https://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Destruction_and_Construction_Learning_for_Fine-Grained_Image_Recognition_CVPR_2019_paper.pdf)
+
+First places on some fine grained product retrieval tasks
+
+---
+
+
+
+## MagFace: A Universal Representation forFace Recognition and Quality Assessment
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2103.06627v1-B3181B.svg)](https://arxiv.org/pdf/2103.06627v1.pdf)
+
+So far: About quality assessment and pushing low quality examples away.
+Improved Arcface loss
+
+---
+
+
+
+## Towards Open World Object Detection
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2103.02603v1-B3181B.svg)](https://arxiv.org/pdf/2103.02603v1.pdf)
+
+Incremental learning. Energy based and memory replay based.
+
+---
+
+
 ## Shop The Look: Building a Large Scale Visual Shopping Systemat Pinterest
 
 [![Paper](http://img.shields.io/badge/paper-arXiv.2006.10866-B3181B.svg)](https://arxiv.org/pdf/2006.10866.pdf)

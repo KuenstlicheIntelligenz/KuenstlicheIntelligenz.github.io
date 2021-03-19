@@ -1,6 +1,43 @@
-I"Y&<p><strong>Work in progress</strong></p>
+I"W-<p><strong>Work in progress</strong></p>
 
 <p>&nbsp;</p>
+
+<h2 id="destruction-and-construction-learning-for-fine-grained-image-recognition">Destruction and Construction Learning for Fine-grained Image Recognition</h2>
+
+<p><a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Destruction_and_Construction_Learning_for_Fine-Grained_Image_Recognition_CVPR_2019_paper.pdf">Link)</a></p>
+
+<p>So far: About quality assessment and pushing low quality examples away.</p>
+
+<hr />
+
+<h2 id="magface-a-universal-representation-forface-recognition-and-quality-assessment">MagFace: A Universal Representation forFace Recognition and Quality Assessment</h2>
+
+<p><a href="https://arxiv.org/pdf/2103.06627v1.pdf"><img src="http://img.shields.io/badge/paper-arXiv.2103.06627v1-B3181B.svg" alt="Paper" /></a></p>
+
+<p>So far: About quality assessment and pushing low quality examples away.
+Improved Arcface loss</p>
+
+<hr />
+
+<h2 id="towards-open-world-object-detection">Towards Open World Object Detection</h2>
+
+<p><a href="https://arxiv.org/pdf/2103.02603v1.pdf"><img src="http://img.shields.io/badge/paper-arXiv.2103.02603v1-B3181B.svg" alt="Paper" /></a></p>
+
+<p>Incremental learning. Energy based and memory replay based.</p>
+
+<hr />
+
+<h2 id="shop-the-look-building-a-large-scale-visual-shopping-systemat-pinterest">Shop The Look: Building a Large Scale Visual Shopping Systemat Pinterest</h2>
+
+<p><a href="https://arxiv.org/pdf/2006.10866.pdf"><img src="http://img.shields.io/badge/paper-arXiv.2006.10866-B3181B.svg" alt="Paper" /></a></p>
+
+<hr />
+
+<h2 id="hard-aware-point-to-set-deep-metric-forperson-re-identification">Hard-Aware Point-to-Set Deep Metric forPerson Re-identification</h2>
+
+<p><a href="https://arxiv.org/pdf/1807.11206.pdf"><img src="http://img.shields.io/badge/paper-arXiv.1807.11206-B3181B.svg" alt="Paper" /></a></p>
+
+<hr />
 
 <h2 id="in-defense-of-the-triplet-loss-again-learning-robust-person-re-identificationwith-fast-approximated-triplet-loss-and-label-distillation">In Defense of the Triplet Loss Again: Learning Robust Person Re-Identificationwith Fast Approximated Triplet Loss and Label Distillation</h2>
 
