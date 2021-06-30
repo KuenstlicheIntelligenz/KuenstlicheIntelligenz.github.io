@@ -17,6 +17,43 @@ tags:
 
 <p>&nbsp;</p>
 
+## Emerging Properties in Self-Supervised Vision Transformers 
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2104.14294-B3181B.svg)](https://arxiv.org/pdf/2104.14294.pdf)
+
+Looks good.
+
+[Example Code](https://github.com/facebookresearch/dino)
+
+---
+
+## End-to-End Object Detection with Transformers
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2005.12872-B3181B.svg)](https://arxiv.org/pdf/2005.12872.pdf)
+
+Learnable object detection without post processing.
+
+[Example Code](https://colab.research.google.com/github/facebookresearch/detr/blob/colab/notebooks/detr_demo.ipynb)
+
+---
+
+## Unsupervised Learning of Visual Features by Contrasting Cluster Assignments
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2006.09882-B3181B.svg)](https://arxiv.org/pdf/2006.09882.pdf)
+
+Unsupervised pretraining, may gives a strong baseline for finetuning.
+
+[Code](https://github.com/facebookresearch/swav)
+
+---
+
+## Self-Challenging Improves Cross-Domain Generalization
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2007.02454-B3181B.svg)](https://arxiv.org/pdf/2007.02454.pdf)
+
+
+---
+
 ## Destruction and Construction Learning for Fine-grained Image Recognition
 
 [Paper Link](https://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Destruction_and_Construction_Learning_for_Fine-Grained_Image_Recognition_CVPR_2019_paper.pdf)
