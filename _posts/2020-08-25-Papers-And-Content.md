@@ -17,6 +17,34 @@ tags:
 
 <p>&nbsp;</p>
 
+## DINO: Emerging Properties in Self-Supervised Vision Transformers 
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2104.14294-B3181B.svg)](https://arxiv.org/pdf/2104.14294.pdf)
+
+DINO comes from self-**di**stillation with **no** labels. The authors use a teacher and a student model. A given
+image is augmented to two "global-views" (e.g. original image coverage >50%) and several (e.g. 6) "local-views"
+with [multi-crop](https://arxiv.org/pdf/2006.09882.pdf) and additional augmentation?
+
+The teacher gets
+a "global-views" of an image (actually 2 global views) and the student gets "local-views". Global means
+
+
+
+---
+
+
+## Meta Pseudo Labels
+
+[![Paper](http://img.shields.io/badge/paper-arXiv.2003.10580-B3181B.svg)](https://arxiv.org/pdf/2003.10580.pdf)
+
+Teacher and student network.  
+Normally  the student is capped by the teacher -> confirmation bias  
+Teacher learns on how well the student does, student learns on pseudolabelled data, annotated by teacher
+
+---
+
+
+
 ## Destruction and Construction Learning for Fine-grained Image Recognition
 
 [Paper Link](https://openaccess.thecvf.com/content_CVPR_2019/papers/Chen_Destruction_and_Construction_Learning_for_Fine-Grained_Image_Recognition_CVPR_2019_paper.pdf)
