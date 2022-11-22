@@ -1,6 +1,32 @@
-I"N-<p><strong>Work in progress</strong></p>
+I"2<p><strong>Work in progress</strong></p>
 
 <p>&nbsp;</p>
+
+<h2 id="end-to-end-object-detection-with-transformers">End-to-End Object Detection with Transformers</h2>
+
+<p><a href="https://arxiv.org/pdf/2005.12872.pdf"><img src="http://img.shields.io/badge/paper-arXiv.2005.12872-B3181B.svg" alt="Paper" /></a></p>
+
+<p>Learnable object detection without post processing.</p>
+
+<p><a href="https://colab.research.google.com/github/facebookresearch/detr/blob/colab/notebooks/detr_demo.ipynb">Example Code</a></p>
+
+<hr />
+
+<h2 id="unsupervised-learning-of-visual-features-by-contrasting-cluster-assignments">Unsupervised Learning of Visual Features by Contrasting Cluster Assignments</h2>
+
+<p><a href="https://arxiv.org/pdf/2006.09882.pdf"><img src="http://img.shields.io/badge/paper-arXiv.2006.09882-B3181B.svg" alt="Paper" /></a></p>
+
+<p>Unsupervised pretraining, may gives a strong baseline for finetuning.</p>
+
+<p><a href="https://github.com/facebookresearch/swav">Code</a></p>
+
+<hr />
+
+<h2 id="self-challenging-improves-cross-domain-generalization">Self-Challenging Improves Cross-Domain Generalization</h2>
+
+<p><a href="https://arxiv.org/pdf/2007.02454.pdf"><img src="http://img.shields.io/badge/paper-arXiv.2007.02454-B3181B.svg" alt="Paper" /></a></p>
+
+<hr />
 
 <h2 id="destruction-and-construction-learning-for-fine-grained-image-recognition">Destruction and Construction Learning for Fine-grained Image Recognition</h2>
 
