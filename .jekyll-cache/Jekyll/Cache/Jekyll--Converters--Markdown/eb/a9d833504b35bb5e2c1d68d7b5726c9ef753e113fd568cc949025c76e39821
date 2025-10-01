@@ -1,4 +1,4 @@
-I"B<p>Instead of using multiple models for image retrival, which has shown to improve performance, this
+I"U<p>Instead of using multiple models for image retrival, which has shown to improve performance, this
 paper aims to get multiple outputs of a single model and combine them to have a similar ensemble effect.
 Basically they combine SPoC, Mac and GeM as pooling methods before the final layers in the network.
 Rember SPoC deals with larger regions, Mac focuses on smaller details in the image.</p>
@@ -64,6 +64,6 @@ ___
 
 <p>Kann ich mal testen wie das hier funktioniert. Wir rücke ich denn ein?</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Just with tab ```python import os test = 1 ```
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Just with tab ```python import os test = 1 ```
 </code></pre></div></div>
 :ET

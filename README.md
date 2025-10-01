@@ -1,8 +1,24 @@
-# Carte Noire
+# LoveIsTheHack
 
-A simple Jekyll theme for blogging. Not named after the coffee.
+**Hacking systems, hearts, and minds for a better tomorrow**
 
-![Homepage](http://i.imgur.com/xlmHArV.png)
+Where rebellion meets compassion. Where code becomes poetry. Where technology serves humanity's highest ideals.
+
+## The Hack
+Love isn't soft - it's the ultimate exploit. It breaks through walls, patches vulnerabilities in society, and roots the human experience in something beautiful.
+
+## What We Build
+- **AI & Machine Learning** that serves people, not corporations
+- **Tutorials** that teach you to think, not just copy-paste
+- **Research** that questions everything and builds better
+- **Tools** that liberate, not enslave
+- **Ideas** that challenge the status quo
+
+## Philosophy
+- **Direct**: No corporate BS, just truth
+- **Beautiful**: Code should be art, tech should inspire
+- **Free**: Knowledge belongs to everyone
+- **Rebellious**: Question everything, improve everything
 
 ### Article
 ![Article](http://i.imgur.com/8rD8FfC.png)

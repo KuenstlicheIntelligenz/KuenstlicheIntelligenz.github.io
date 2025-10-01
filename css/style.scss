@@ -4,7 +4,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700);
 
-/* Colours */
+/* Legacy SCSS Variables (for compatibility) */
 $twitter:        #6dabda;
 $linkedin:       #2b77b1;
 $xing:           #006567;
@@ -30,6 +30,12 @@ $medium-purple:  #480048;
 $regular-purple: #601848;
 $red:            #C04848;
 $orange:         #F07241;
+
+/* Hacker aesthetic colors */
+$matrix-green:   #00FF41;
+$cyber-blue:     #00D4FF;
+$neon-pink:      #FF1493;
+$terminal-amber: #FFA500;
 
 /* Responsive sizes */
 $screen-sm-min: 768px;
@@ -901,6 +907,89 @@ td{
 }
 
 
-.category-links{
-    color: #FFF !important;
+/* Firefox-compatible category links with maximum specificity */
+.category-links {
+    display: block !important;
+    width: 100% !important;
+    height: 42px !important;
+    line-height: 26px !important;
+    margin: 0 !important;
+    padding: 8px 6px !important;
+    background-color: #215A6D !important;
+    background: #215A6D !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    border-radius: 5px !important;
+    border: 1px solid #215A6D !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    text-align: center !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15) !important;
+    box-sizing: border-box !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+/* Ultra-specific selectors for Firefox compatibility */
+a.category-links,
+a.category-links:link,
+a.category-links:visited {
+    display: block !important;
+    background-color: #215A6D !important;
+    background: #215A6D !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+}
+
+a.category-links:hover {
+    background-color: #3CA2A2 !important;
+    background: #3CA2A2 !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2) !important;
+}
+
+a.category-links:active,
+a.category-links:focus {
+    background-color: #3B3B35 !important;
+    background: #3B3B35 !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+.category-links i {
+    margin-right: 6px !important;
+    color: #3CA2A2 !important;
+    font-size: 14px !important;
+}
+
+/* Firefox-specific overrides */
+@-moz-document url-prefix() {
+    .category-links {
+        background-color: #215A6D !important;
+        color: #FFFFFF !important;
+        text-decoration: none !important;
     }
+}
+
+/* Additional category navigation styling */
+.category-navigation {
+    margin: 15px 0 10px 0 !important;
+    padding: 5px 0 !important;
+    
+    .row {
+        margin-left: -6px;
+        margin-right: -6px;
+        margin-bottom: 5px !important;
+    }
+    
+    .col-lg-3, .col-lg-4, .col-md-6, .col-sm-6, .col-xs-12 {
+        padding-left: 6px;
+        padding-right: 6px;
+        margin-bottom: 8px !important;
+    }
+}
