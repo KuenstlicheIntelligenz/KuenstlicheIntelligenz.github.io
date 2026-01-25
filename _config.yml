@@ -1,10 +1,10 @@
 # Site settings
-title: "LoveIsTheHack"
+title: "aibab"
 email: remixbarny@gmx.de
-description: "Building a free society through beautiful technology. Where code meets compassion and rebellion has purpose."
+description: "AI Engineer & Machine Learning Specialist. Building intelligent systems and exploring the frontiers of artificial intelligence."
 baseurl: ""
 url: "https://kuenstlicheintelligenz.github.io/"
-title_description: "Hacking systems, hearts, and minds for a better tomorrow"
+title_description: "AI Engineer | ML Specialist | Technology Innovator"
 title_image: "https://www.gravatar.com/avatar/00000000000000000000000000000000?s=500&d=mm"
 #google_analytics: "UA-20365477-4"
 #disqus_account: cartenoire
@@ -33,7 +33,7 @@ github_username:  KuenstlicheIntelligenz
 #facebook_link:
 
 # Footer
-footer_left: "Built with <i class=\"fas fa-heart\"></i> and caffeine by <a href=\"https://github.com/KuenstlicheIntelligenz\">Bab</a>"
+footer_left: "Built with <i class=\"fas fa-heart\"></i> by <a href=\"https://github.com/KuenstlicheIntelligenz\">aibab</a>"
 footer_right: "&lt;/&gt; <a href=\"https://github.com/KuenstlicheIntelligenz/KuenstlicheIntelligenz.github.io\">Source</a> &nbsp;<i class=\"fab fa-github-alt\"></i>"
 
 # Build settings
@@ -58,36 +58,49 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-archives
-  - jekyll-minifier
-
-# Plugin configurations
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-  layout: archive
-  permalinks:
-    category: '/category/:name/'
-    tag: '/tag/:name/'
-
-jekyll-minifier:
-  remove_spaces_inside_tags: true
-  remove_multi_spaces: true
-  remove_comments: true
-  remove_intertag_spaces: true
-  remove_quotes: false
-  compress_css: true
-  compress_javascript: true
 
 collections:
   social:
     output: true
+    permalink: /lifestyle/:title/
+  travel:
+    output: true
+    permalink: /travel/:title/
+  kitesurf:
+    output: true
+    permalink: /kitesurf/:title/
+  videos:
+    output: true
+    permalink: /videos/:title/
 
 defaults:
-  - 
+  -
     scope:
       path: ""
       type: "posts"
     values:
         layout: "post"
+  -
+    scope:
+      path: ""
+      type: "travel"
+    values:
+        layout: "gallery-post"
+  -
+    scope:
+      path: ""
+      type: "kitesurf"
+    values:
+        layout: "gallery-post"
+  -
+    scope:
+      path: ""
+      type: "social"
+    values:
+        layout: "gallery-post"
+  -
+    scope:
+      path: ""
+      type: "videos"
+    values:
+        layout: "video-post"

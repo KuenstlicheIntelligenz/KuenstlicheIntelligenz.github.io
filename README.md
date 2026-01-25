@@ -1,24 +1,26 @@
-# LoveIsTheHack
+# aibab
 
-**Hacking systems, hearts, and minds for a better tomorrow**
+**AI Engineer | Machine Learning Specialist | Technology Innovator**
 
-Where rebellion meets compassion. Where code becomes poetry. Where technology serves humanity's highest ideals.
+Personal portfolio and digital business card showcasing my work in artificial intelligence and machine learning.
 
-## The Hack
-Love isn't soft - it's the ultimate exploit. It breaks through walls, patches vulnerabilities in society, and roots the human experience in something beautiful.
+## About
 
-## What We Build
-- **AI & Machine Learning** that serves people, not corporations
-- **Tutorials** that teach you to think, not just copy-paste
-- **Research** that questions everything and builds better
-- **Tools** that liberate, not enslave
-- **Ideas** that challenge the status quo
+I'm an AI engineer passionate about building intelligent systems and exploring the frontiers of artificial intelligence. This site serves as my digital presence, featuring:
 
-## Philosophy
-- **Direct**: No corporate BS, just truth
-- **Beautiful**: Code should be art, tech should inspire
-- **Free**: Knowledge belongs to everyone
-- **Rebellious**: Question everything, improve everything
+- **Technical Blog Posts** on AI/ML topics, deep learning, and software engineering
+- **Research Summaries** of interesting papers and concepts
+- **Project Showcases** demonstrating practical applications
+- **Tutorials & Guides** for developers and ML practitioners
+
+## Expertise
+
+- Deep Learning & Neural Networks
+- Machine Learning Pipelines
+- Cloud Infrastructure (GCP, BigQuery)
+- Computer Vision
+- Few-Shot Learning
+- Kubernetes & MLOps
 
 ### Article
 ![Article](http://i.imgur.com/8rD8FfC.png)
@@ -36,16 +38,13 @@ Love isn't soft - it's the ultimate exploit. It breaks through walls, patches vu
 ![Menu](http://i.imgur.com/SClrNSH.png)
 
 ## Contact
-If you wish to contact me regarding this theme please raise an issue on GitHub,
-tweet me [@_jacobtomlinson](http://www.twitter.com/_jacobtomlinson) or email me
-[jacob@jacobtomlinson.co.uk](mailto:jacob@jacobtomlinson.co.uk).
 
-## Contribution
-Pull requests are very welcome.
+- **GitHub**: [@KuenstlicheIntelligenz](https://github.com/KuenstlicheIntelligenz)
+- **Email**: remixbarny@gmx.de
 
-## Theme
-This jekyll theme has been created from scratch. Ideas and inspiration are taken
-from other places but the code is my own.
+## Site Details
+
+This is a Jekyll-based personal website built from a custom theme. The site serves as a professional portfolio and knowledge-sharing platform.
 
 ## Tools and Libraries
 The following tools and libraries are used in this theme

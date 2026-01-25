@@ -28,3 +28,12 @@ _site/
 Gemfile.lock
 
 .idea
+
+.env
+
+# Cloudinary staging images (upload before committing posts)
+assets/images/kitesurf/
+assets/images/travel/
+assets/images/lifestyle/
+assets/images/videos/
+assets/images/social/

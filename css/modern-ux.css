@@ -1,23 +1,7 @@
 /* Modern CSS Custom Properties for LoveIsTheHack */
 
-/* Default Light Theme */
+/* Default Dark Theme (Primary) */
 :root {
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F8F9FA;
-  --bg-tertiary: #E9ECEF;
-  --text-primary: #212529;
-  --text-secondary: #6C757D;
-  --text-accent: #0D6EFD;
-  --border-color: #DEE2E6;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --hacker-green: #00FF41;
-  --cyber-blue: #00D4FF;
-  --neon-pink: #FF1493;
-  --terminal-amber: #FFA500;
-}
-
-/* Dark Theme (Hacker Mode) */
-[data-theme="dark"] {
   --bg-primary: #2D2D29;
   --bg-secondary: #21211E;
   --bg-tertiary: #3B3B35;
@@ -26,6 +10,22 @@
   --text-accent: #3CA2A2;
   --border-color: #3B3B35;
   --shadow-color: rgba(0, 0, 0, 0.3);
+  --hacker-green: #00FF41;
+  --cyber-blue: #00D4FF;
+  --neon-pink: #FF1493;
+  --terminal-amber: #FFA500;
+}
+
+/* Light Theme (Optional Override) */
+[data-theme="light"] {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8F9FA;
+  --bg-tertiary: #E9ECEF;
+  --text-primary: #212529;
+  --text-secondary: #6C757D;
+  --text-accent: #0D6EFD;
+  --border-color: #DEE2E6;
+  --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Modern UX Enhancements */

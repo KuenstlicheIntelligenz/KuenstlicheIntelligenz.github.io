@@ -3,79 +3,187 @@ layout: default
 make-smaller-titles: true
 ---
 
-
 <div class="container-fluid index">
+
+    <!-- Hero Section -->
     <div class="row">
-
         <div class="col-md-12 main content-panel">
-
-            <!-- <div class="gravatar"> -->
-            <!-- <img src="{{ site.title_image }}" class="img-circle about-image" height="150" width="150" alt="{{ site.title }}" /> -->
-            <!-- </div> -->
-
             <h1 class="header author-header" itemprop="headline">{{ site.title }}</h1>
-
             <div class="author-text">
                 {{ site.title_description }}
             </div>
-
-            <div class="category-navigation" style="margin: 15px 0 10px 0; padding: 5px 0; border-bottom: 2px solid #3B3B35;">
-                <div class="row" style="margin-bottom: 5px;">
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 8px; padding: 0 6px;">
-                        <a href="{{ site.baseurl }}/deep-learning/" class="category-links" style="display: block; background-color: #215A6D !important; color: #FFFFFF !important; text-decoration: none !important; padding: 8px 6px; border-radius: 5px; text-align: center; height: 42px; line-height: 26px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px;"><i class="fas fa-brain" style="color: #3CA2A2 !important; margin-right: 4px;"></i> Deep Learning</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 8px; padding: 0 6px;">
-                        <a href="{{ site.baseurl }}/machine-learning/" class="category-links" style="display: block; background-color: #215A6D !important; color: #FFFFFF !important; text-decoration: none !important; padding: 8px 6px; border-radius: 5px; text-align: center; height: 42px; line-height: 26px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px;"><i class="fas fa-robot" style="color: #3CA2A2 !important; margin-right: 4px;"></i> Machine Learning</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 8px; padding: 0 6px;">
-                        <a href="{{ site.baseurl }}/tutorials/" class="category-links" style="display: block; background-color: #215A6D !important; color: #FFFFFF !important; text-decoration: none !important; padding: 8px 6px; border-radius: 5px; text-align: center; height: 42px; line-height: 26px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px;"><i class="fas fa-code" style="color: #3CA2A2 !important; margin-right: 4px;"></i> Tutorials</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 8px; padding: 0 6px;">
-                        <a href="{{ site.baseurl }}/research/" class="category-links" style="display: block; background-color: #215A6D !important; color: #FFFFFF !important; text-decoration: none !important; padding: 8px 6px; border-radius: 5px; text-align: center; height: 42px; line-height: 26px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px;"><i class="fas fa-flask" style="color: #3CA2A2 !important; margin-right: 4px;"></i> Research</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 8px; padding: 0 6px;">
-                        <a href="{{ site.baseurl }}/cloud/" class="category-links" style="display: block; background-color: #215A6D !important; color: #FFFFFF !important; text-decoration: none !important; padding: 8px 6px; border-radius: 5px; text-align: center; height: 42px; line-height: 26px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px;"><i class="fas fa-cloud" style="color: #3CA2A2 !important; margin-right: 4px;"></i> Cloud & DevOps</a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 8px; padding: 0 6px;">
-                        <a href="{{ site.baseurl }}/tools/" class="category-links" style="display: block; background-color: #215A6D !important; color: #FFFFFF !important; text-decoration: none !important; padding: 8px 6px; border-radius: 5px; text-align: center; height: 42px; line-height: 26px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px;"><i class="fas fa-wrench" style="color: #3CA2A2 !important; margin-right: 4px;"></i> Tools & Hacks</a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" style="margin-bottom: 8px; padding: 0 6px;">
-                        <a href="{{ site.baseurl }}/thoughts/" class="category-links" style="display: block; background-color: #215A6D !important; color: #FFFFFF !important; text-decoration: none !important; padding: 8px 6px; border-radius: 5px; text-align: center; height: 42px; line-height: 26px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px;"><i class="fas fa-lightbulb" style="color: #3CA2A2 !important; margin-right: 4px;"></i> Random Thoughts</a>
-                    </div>
-                </div>
-            </div>
-            <!--            <div class="category-links">-->
-            <!--                <a href="{{ site.baseurl }}/social/"><i class="fa fa-social"></i> Social</a>-->
-            <!--                <a href="{{ site.baseurl }}/ai/"><i class="fa fa-ai"></i> Artificial Intelligence</a>-->
-            <!--            </div>-->
-
             {% include social_links.html %}
         </div>
-        <div class="col-md-12 main content-panel">
+    </div>
 
-            <div class="articles">
+    <!-- Content Type Filters -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="content-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> All
+                </button>
+                <button class="filter-btn" data-filter="kitesurf">
+                    <i class="fas fa-wind"></i> Kitesurf
+                </button>
+                <button class="filter-btn" data-filter="travel">
+                    <i class="fas fa-globe-americas"></i> Travel
+                </button>
+                <button class="filter-btn" data-filter="lifestyle">
+                    <i class="fas fa-heart"></i> Lifestyle
+                </button>
+                <button class="filter-btn" data-filter="video">
+                    <i class="fas fa-video"></i> Videos
+                </button>
+                <button class="filter-btn" data-filter="tech">
+                    <i class="fas fa-code"></i> Tech
+                </button>
+            </div>
+        </div>
+    </div>
 
-                <h2>Latest Articles</h2>
+    <!-- Instagram-Style Feed Grid -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="feed-grid" id="feedGrid">
 
-                <ul>
-                    {% for post in site.posts limit: site.post_limit %}
+                {% comment %} Aggregate all content types {% endcomment %}
+                {% assign all_content = "" | split: "" %}
 
-                    <li>
-                        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                        <small class="hidden-xs">{{ post.date | date: "%B %-d, %Y" }}</small>
-                    </li>
+                {% comment %} Add kitesurf posts {% endcomment %}
+                {% for post in site.kitesurf %}
+                    {% assign all_content = all_content | push: post %}
+                {% endfor %}
 
-                    {% endfor %}
-                    <li>
-                        <small><i><a href="{{ site.baseurl }}/posts/">more...</a></i></small>
-                    </li>
-                </ul>
+                {% comment %} Add travel posts {% endcomment %}
+                {% for post in site.travel %}
+                    {% assign all_content = all_content | push: post %}
+                {% endfor %}
+
+                {% comment %} Add lifestyle posts {% endcomment %}
+                {% for post in site.social %}
+                    {% assign all_content = all_content | push: post %}
+                {% endfor %}
+
+                {% comment %} Add video posts {% endcomment %}
+                {% for post in site.videos %}
+                    {% assign all_content = all_content | push: post %}
+                {% endfor %}
+
+                {% comment %} Add tech posts (limited to recent) {% endcomment %}
+                {% for post in site.posts limit: 10 %}
+                    {% assign all_content = all_content | push: post %}
+                {% endfor %}
+
+                {% comment %} Sort by date and render cards {% endcomment %}
+                {% assign sorted_content = all_content | sort: 'date' | reverse %}
+
+                {% for item in sorted_content %}
+                    {% comment %} Determine content type {% endcomment %}
+                    {% assign content_type = "tech" %}
+                    {% if item.collection == "kitesurf" %}
+                        {% assign content_type = "kitesurf" %}
+                        {% assign icon = "fa-wind" %}
+                    {% elsif item.collection == "travel" %}
+                        {% assign content_type = "travel" %}
+                        {% assign icon = "fa-globe-americas" %}
+                    {% elsif item.collection == "social" %}
+                        {% assign content_type = "lifestyle" %}
+                        {% assign icon = "fa-heart" %}
+                    {% elsif item.collection == "videos" %}
+                        {% assign content_type = "video" %}
+                        {% assign icon = "fa-video" %}
+                    {% else %}
+                        {% assign content_type = "tech" %}
+                        {% assign icon = "fa-code" %}
+                    {% endif %}
+
+                    {% comment %} Get thumbnail image {% endcomment %}
+                    {% if item.thumbnail %}
+                        {% assign thumb_url = item.thumbnail %}
+                    {% elsif item.gallery and item.gallery.size > 0 %}
+                        {% assign thumb_url = item.gallery[0].image %}
+                    {% elsif item.youtube_id %}
+                        {% assign thumb_url = "https://img.youtube.com/vi/" | append: item.youtube_id | append: "/maxresdefault.jpg" %}
+                    {% else %}
+                        {% assign thumb_url = "https://via.placeholder.com/400x400/3CA2A2/FFFFFF?text=" | append: content_type %}
+                    {% endif %}
+
+                    <div class="feed-card" data-type="{{ content_type }}">
+                        <div class="feed-card-content">
+                            <h3 class="feed-card-title">
+                                <a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+                            </h3>
+                            <div class="feed-card-meta">
+                                <i class="fas fa-calendar"></i> {{ item.date | date: "%B %-d, %Y" }}
+                                {% if item.location %}
+                                    | <i class="fas fa-map-marker-alt"></i> {{ item.location }}
+                                {% endif %}
+                                {% if item.duration %}
+                                    | <i class="fas fa-clock"></i> {{ item.duration }}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="feed-card-image-container">
+                            <a href="{{ item.url | prepend: site.baseurl }}">
+                                <img src="{{ thumb_url }}" alt="{{ item.title }}" class="feed-card-image" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="feed-card-content">
+                            {% if item.summary %}
+                                <p class="feed-card-excerpt">{{ item.summary | truncatewords: 15 }}</p>
+                            {% elsif item.excerpt %}
+                                <p class="feed-card-excerpt">{{ item.excerpt | strip_html | truncatewords: 15 }}</p>
+                            {% endif %}
+                            {% if item.tags and item.tags.size > 0 %}
+                                <div class="feed-card-tags">
+                                    {% for tag in item.tags limit: 3 %}
+                                        <span class="feed-card-tag">#{{ tag }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% if sorted_content.size == 0 %}
+                    <div class="col-md-12">
+                        <p class="no-posts">No content yet. Check back soon!</p>
+                    </div>
+                {% endif %}
 
             </div>
-
         </div>
-
     </div>
+
+
 </div>
+
+<script>
+// Feed Filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const feedCards = document.querySelectorAll('.feed-card');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            // Filter cards
+            feedCards.forEach(card => {
+                const cardType = card.getAttribute('data-type');
+                if (filter === 'all' || cardType === filter) {
+                    card.style.display = 'flex';
+                    card.style.animation = 'fadeIn 0.5s ease-out';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
