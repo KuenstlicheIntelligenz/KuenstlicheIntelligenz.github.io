@@ -1,0 +1,28 @@
+{
+  "name": "kuenstlicheintelligenz.github.io",
+  "version": "1.0.0",
+  "description": "**AI Engineer | Machine Learning Specialist | Technology Innovator**",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuenstlicheIntelligenz/KuenstlicheIntelligenz.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/KuenstlicheIntelligenz/KuenstlicheIntelligenz.github.io/issues"
+  },
+  "homepage": "https://github.com/KuenstlicheIntelligenz/KuenstlicheIntelligenz.github.io#readme",
+  "dependencies": {
+    "@astrojs/rss": "^4.0.17",
+    "@astrojs/sitemap": "^3.7.1",
+    "astro": "^6.0.8",
+    "reading-time": "^1.5.0"
+  }
+}

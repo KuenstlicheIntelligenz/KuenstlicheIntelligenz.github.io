@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts');
+const travel = await getCollection('travel');
+const kitesurf = await getCollection('kitesurf');
+const videos = await getCollection('videos');
+const social = await getCollection('social');
+
+type SearchItem = { title: string; url: string; tags: string[]; type: string };
+
+const searchData: SearchItem[] = [
+  ...posts.map(p => ({ title: p.data.title, url: `/posts/${p.id}/`, tags: p.data.tags, type: 'tech' })),
+  ...travel.map(p => ({ title: p.data.title, url: `/travel/${p.id}/`, tags: p.data.tags, type: 'travel' })),
+  ...kitesurf.map(p => ({ title: p.data.title, url: `/kitesurf/${p.id}/`, tags: p.data.tags, type: 'kitesurf' })),
+  ...videos.map(p => ({ title: p.data.title, url: `/videos/${p.id}/`, tags: p.data.tags, type: 'video' })),
+  ...social.map(p => ({ title: p.data.title, url: `/lifestyle/${p.id}/`, tags: p.data.tags, type: 'lifestyle' })),
+];
+---
+
+<BaseLayout title="Search">
+  <div class="container-fluid index">
+    <h1 class="header author-header"><i class="fas fa-search"></i> Search</h1>
+    <p style="color: #999; text-align: center;">Find posts, tutorials, research, and more.</p>
+
+    <div style="max-width: 600px; margin: 2rem auto;">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Search for deep learning, tutorials, cloud tips..."
+        autocomplete="off"
+        style="width: 100%; padding: 0.8rem 1rem; background: #2D2D29; border: 1px solid rgba(60,162,162,0.3); color: #D0D0D0; border-radius: 8px; font-size: 1rem;"
+      />
+    </div>
+
+    <div id="search-results" style="max-width: 800px; margin: 0 auto;">
+      <div id="search-placeholder" style="text-align: center; color: #999; padding: 2rem;">
+        <i class="fas fa-search fa-3x" style="margin-bottom: 1rem; display: block;"></i>
+        <p>Start typing to discover content...</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script define:vars={{ searchData }}>
+  const input = document.getElementById('search-input');
+  const results = document.getElementById('search-results');
+  const placeholder = document.getElementById('search-placeholder');
+
+  input?.addEventListener('input', function() {
+    const query = this.value.toLowerCase().trim();
+    if (!query) {
+      results.innerHTML = '';
+      results.appendChild(placeholder);
+      return;
+    }
+
+    const matches = searchData.filter(item =>
+      item.title.toLowerCase().includes(query) ||
+      item.tags.some(t => t.toLowerCase().includes(query)) ||
+      item.type.toLowerCase().includes(query)
+    );
+
+    if (matches.length === 0) {
+      results.innerHTML = '<p style="text-align:center;color:#999;">No results found</p>';
+      return;
+    }
+
+    results.innerHTML = '<ul style="list-style:none;padding:0;">' +
+      matches.map(m =>
+        `<li style="padding:0.5rem 0;border-bottom:1px solid rgba(60,162,162,0.1);">
+          <a href="${m.url}" style="color:#3CA2A2;text-decoration:none;font-size:1.1rem;">${m.title}</a>
+          <small style="color:#999;margin-left:0.5rem;">[${m.type}]</small>
+        </li>`
+      ).join('') + '</ul>';
+  });
+</script>

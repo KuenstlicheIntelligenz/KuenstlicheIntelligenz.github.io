@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FeedCard from '../../components/FeedCard.astro';
+import { getCollection } from 'astro:content';
+
+const kitesurf = await getCollection('kitesurf');
+const sorted = kitesurf.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title="Kitesurfing">
+  <div class="container-fluid index">
+    <h1 class="header author-header"><i class="fas fa-wind"></i> Kitesurfing</h1>
+    <p style="color: #999; text-align: center; margin-bottom: 2rem;">
+      Riding the wind, chasing waves. Sessions, tricks, and adventures on the water.
+    </p>
+
+    <div class="feed-grid">
+      {sorted.map(post => (
+        <FeedCard
+          title={post.data.title}
+          url={`/kitesurf/${post.id}/`}
+          date={post.data.date}
+          type="kitesurf"
+          thumbnail={post.data.thumbnail}
+          summary={post.data.summary}
+          location={post.data.location}
+          tags={post.data.tags}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

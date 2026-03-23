@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FeedCard from '../../components/FeedCard.astro';
+import { getCollection } from 'astro:content';
+
+const travel = await getCollection('travel');
+const sorted = travel.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title="Travel">
+  <div class="container-fluid index">
+    <h1 class="header author-header"><i class="fas fa-globe-americas"></i> Travel</h1>
+    <p style="color: #999; text-align: center; margin-bottom: 2rem;">
+      Exploring the world, one adventure at a time.
+    </p>
+
+    <div class="feed-grid">
+      {sorted.map(post => (
+        <FeedCard
+          title={post.data.title}
+          url={`/travel/${post.id}/`}
+          date={post.data.date}
+          type="travel"
+          thumbnail={post.data.thumbnail}
+          summary={post.data.summary}
+          location={post.data.location}
+          tags={post.data.tags}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

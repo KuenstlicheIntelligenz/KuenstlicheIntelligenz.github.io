@@ -1,0 +1,63 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PhotoCarousel from '../components/PhotoCarousel.astro';
+
+interface GalleryImage {
+  image: string;
+  caption?: string;
+}
+
+interface Props {
+  title: string;
+  date: Date;
+  location?: string;
+  summary?: string;
+  tags?: string[];
+  gallery?: GalleryImage[];
+  photos?: string[];
+}
+
+const { title, date, location, summary, tags, gallery, photos } = Astro.props;
+
+// Convert photos array to gallery format if gallery not provided
+const images: GalleryImage[] = gallery || (photos || []).map(p => ({ image: p }));
+---
+
+<BaseLayout title={title} description={summary} ogType="article">
+  <div class="container-fluid single">
+    <div class="article gallery-article" itemscope itemtype="http://schema.org/Article">
+
+      <h1 class="header" itemprop="name">{title}</h1>
+
+      <div class="author">
+        <small><i>
+          <span itemprop="datePublished">{date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          {location && (
+            <span>
+              <i class="fas fa-map-marker-alt" style="margin-left: 1rem; color: var(--text-accent, #3CA2A2);"></i> {location}
+            </span>
+          )}
+        </i></small>
+      </div>
+
+      <div class="content-panel content">
+        {images.length > 0 && <PhotoCarousel images={images} title={title} />}
+
+        <div class="post-content">
+          <span itemprop="articleBody">
+            <slot />
+          </span>
+        </div>
+
+        {tags && tags.length > 0 && (
+          <div class="tags">
+            <small>
+              <i class="fas fa-tags"></i> {tags.join(', ')}
+            </small>
+          </div>
+        )}
+      </div>
+
+    </div>
+  </div>
+</BaseLayout>

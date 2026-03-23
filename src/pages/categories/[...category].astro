@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  const categories = new Set<string>();
+
+  posts.forEach(post => {
+    if (post.data.categories) {
+      post.data.categories.split(',').forEach(cat => categories.add(cat.trim()));
+    }
+  });
+
+  return [...categories].map(category => ({
+    params: { category: category.toLowerCase().replace(/\s+/g, '-') },
+    props: {
+      category,
+      posts: posts
+        .filter(p => p.data.categories?.includes(category))
+        .sort((a, b) => b.data.date.getTime() - a.data.date.getTime()),
+    },
+  }));
+}
+
+const { category, posts } = Astro.props;
+---
+
+<BaseLayout title={category}>
+  <div class="container-fluid index">
+    <h1 class="header author-header">{category}</h1>
+
+    <div class="posts-list" style="max-width: 800px; margin: 0 auto;">
+      {posts.map((post: any) => (
+        <div style="padding: 0.8rem 0; border-bottom: 1px solid rgba(60,162,162,0.1);">
+          <a href={`/posts/${post.id}/`} style="color: #D0D0D0; text-decoration: none; font-size: 1.1rem;">
+            {post.data.title}
+          </a>
+          <small style="color: #999; margin-left: 1rem;">
+            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+          </small>
+        </div>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

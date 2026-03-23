@@ -1,0 +1,142 @@
+---
+import SocialLinks from './SocialLinks.astro';
+---
+
+<nav class="site-nav" id="site-nav">
+  <div class="nav-header">
+    <p>aibab</p>
+    <button class="nav-close" aria-label="Close menu">&times;</button>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/"><i class="fas fa-home"></i> Home</a></li>
+
+    <li class="nav-section-header"><i class="fas fa-heart"></i> Lifestyle</li>
+    <li class="nav-submenu"><a href="/lifestyle/"><i class="fas fa-heart"></i> All Lifestyle</a></li>
+    <li class="nav-submenu"><a href="/kitesurf/"><i class="fas fa-wind"></i> Kitesurfing</a></li>
+    <li class="nav-submenu"><a href="/travel/"><i class="fas fa-globe-americas"></i> Travel</a></li>
+
+    <li><a href="/videos/"><i class="fas fa-video"></i> Videos</a></li>
+
+    <li class="nav-section-header"><i class="fas fa-code"></i> Technical</li>
+    <li class="nav-submenu"><a href="/tech/"><i class="fas fa-code"></i> All Technical</a></li>
+
+    <li><a href="/search/"><i class="fas fa-search"></i> Search</a></li>
+    <li><a href="/posts/"><i class="fas fa-archive"></i> Archive</a></li>
+    <li><a href="/about/"><i class="fas fa-user"></i> About</a></li>
+  </ul>
+  <SocialLinks />
+</nav>
+<button class="menu-button" id="menu-toggle" aria-label="Open menu">
+  <i class="fas fa-bars"></i>
+</button>
+
+<style>
+  .site-nav {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100%;
+    background: #21211E;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: left 0.3s ease;
+    padding: 1rem;
+  }
+  .site-nav.open {
+    left: 0;
+  }
+  .nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .nav-header p {
+    color: #3CA2A2;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  .nav-close {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-links li a {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    color: #D0D0D0;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .nav-links li a:hover {
+    color: #3CA2A2;
+  }
+  .nav-section-header {
+    color: #999;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 1rem 0.8rem 0.3rem;
+    letter-spacing: 0.05em;
+  }
+  .nav-submenu a {
+    padding-left: 1.5rem !important;
+  }
+  .menu-button {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 999;
+    background: rgba(45, 45, 41, 0.9);
+    border: 1px solid rgba(60, 162, 162, 0.3);
+    color: #3CA2A2;
+    padding: 0.5rem 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+  }
+  .nav-overlay.show {
+    display: block;
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('site-nav');
+  const closeBtn = nav?.querySelector('.nav-close');
+
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  document.body.appendChild(overlay);
+
+  function openMenu() {
+    nav?.classList.add('open');
+    overlay.classList.add('show');
+  }
+  function closeMenu() {
+    nav?.classList.remove('open');
+    overlay.classList.remove('show');
+  }
+
+  toggle?.addEventListener('click', openMenu);
+  closeBtn?.addEventListener('click', closeMenu);
+  overlay.addEventListener('click', closeMenu);
+</script>

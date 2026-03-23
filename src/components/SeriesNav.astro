@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+  series: string;
+  currentTitle: string;
+  collection?: string;
+}
+
+const { series, currentTitle, collection = 'posts' } = Astro.props;
+
+const allPosts = await getCollection(collection as any);
+const seriesPosts = allPosts
+  .filter((p: any) => p.data.series === series)
+  .sort((a: any, b: any) => a.data.date.getTime() - b.data.date.getTime());
+---
+
+{seriesPosts.length > 1 && (
+  <div class="series-info">
+    This is part of the '{series}' series:
+    <ol class="series">
+      {seriesPosts.map((post: any) => (
+        <li>
+          {post.data.title === currentTitle ? (
+            <strong>{post.data.title}</strong>
+          ) : (
+            <a href={`/${collection === 'posts' ? 'posts' : collection}/${post.id}/`}>{post.data.title}</a>
+          )}
+        </li>
+      ))}
+    </ol>
+  </div>
+)}

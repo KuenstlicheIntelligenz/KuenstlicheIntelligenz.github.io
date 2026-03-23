@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FeedCard from '../../components/FeedCard.astro';
+import { getCollection } from 'astro:content';
+
+const social = await getCollection('social');
+const sorted = social.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title="Lifestyle">
+  <div class="container-fluid index">
+    <h1 class="header author-header"><i class="fas fa-heart"></i> Lifestyle</h1>
+    <p style="color: #999; text-align: center; margin-bottom: 2rem;">
+      Life beyond code. Personal moments, thoughts, and stories.
+    </p>
+
+    <div class="feed-grid">
+      {sorted.map(post => (
+        <FeedCard
+          title={post.data.title}
+          url={`/lifestyle/${post.id}/`}
+          date={post.data.date}
+          type="lifestyle"
+          thumbnail={post.data.thumbnail}
+          summary={post.data.summary}
+          location={post.data.location}
+          tags={post.data.tags}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

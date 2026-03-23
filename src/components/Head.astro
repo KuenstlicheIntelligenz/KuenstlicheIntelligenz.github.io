@@ -1,0 +1,62 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  author?: string;
+  ogType?: string;
+}
+
+const {
+  title,
+  description = 'AI Engineer & Machine Learning Specialist. Building intelligent systems and exploring the frontiers of artificial intelligence.',
+  author = 'Bab',
+  ogType = 'website',
+} = Astro.props;
+
+const siteTitle = 'aibab';
+const pageTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} - AI Engineer | ML Specialist | Technology Innovator`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<title>{pageTitle}</title>
+<meta name="description" content={description}>
+<meta name="author" content={author}>
+<meta name="theme-color" content="#2D2D29">
+
+<!-- Preconnects -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+<!-- Open Graph -->
+<meta property="og:type" content={ogType}>
+<meta property="og:url" content={canonicalURL}>
+<meta property="og:title" content={title || siteTitle}>
+<meta property="og:description" content={description}>
+<meta property="og:site_name" content={siteTitle}>
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content={canonicalURL}>
+<meta property="twitter:title" content={title || siteTitle}>
+<meta property="twitter:description" content={description}>
+
+<!-- PWA -->
+<link rel="manifest" href="/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content={siteTitle}>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="shortcut icon" href="/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">

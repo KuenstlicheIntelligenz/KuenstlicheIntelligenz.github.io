@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FeedCard from '../../components/FeedCard.astro';
+import { getCollection } from 'astro:content';
+
+const videos = await getCollection('videos');
+const sorted = videos.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<BaseLayout title="Videos">
+  <div class="container-fluid index">
+    <h1 class="header author-header"><i class="fas fa-video"></i> Videos</h1>
+    <p style="color: #999; text-align: center; margin-bottom: 2rem;">
+      AI code roasts, tutorials, and tech commentary.
+    </p>
+
+    <div class="feed-grid">
+      {sorted.map(video => (
+        <FeedCard
+          title={video.data.title}
+          url={`/videos/${video.id}/`}
+          date={video.data.date}
+          type="video"
+          thumbnail={video.data.thumbnail}
+          duration={video.data.duration}
+          tags={video.data.tags}
+          youtubeId={video.data.youtube_id}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

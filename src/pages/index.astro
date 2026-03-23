@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import FeedCard from '../components/FeedCard.astro';
+import { getCollection } from 'astro:content';
+
+const [posts, travel, kitesurf, videos, social] = await Promise.all([
+  getCollection('posts'),
+  getCollection('travel'),
+  getCollection('kitesurf'),
+  getCollection('videos'),
+  getCollection('social'),
+]);
+
+type FeedItem = {
+  title: string;
+  url: string;
+  date: Date;
+  type: string;
+  thumbnail?: string;
+  summary?: string;
+  location?: string;
+  duration?: string;
+  tags?: string[];
+  youtubeId?: string;
+};
+
+const allContent: FeedItem[] = [
+  ...kitesurf.map(p => ({
+    title: p.data.title,
+    url: `/kitesurf/${p.id}/`,
+    date: p.data.date,
+    type: 'kitesurf',
+    thumbnail: p.data.thumbnail,
+    summary: p.data.summary,
+    location: p.data.location,
+    tags: p.data.tags,
+  })),
+  ...travel.map(p => ({
+    title: p.data.title,
+    url: `/travel/${p.id}/`,
+    date: p.data.date,
+    type: 'travel',
+    thumbnail: p.data.thumbnail,
+    summary: p.data.summary,
+    location: p.data.location,
+    tags: p.data.tags,
+  })),
+  ...social.map(p => ({
+    title: p.data.title,
+    url: `/lifestyle/${p.id}/`,
+    date: p.data.date,
+    type: 'lifestyle',
+    thumbnail: p.data.thumbnail,
+    summary: p.data.summary,
+    location: p.data.location,
+    tags: p.data.tags,
+  })),
+  ...videos.map(p => ({
+    title: p.data.title,
+    url: `/videos/${p.id}/`,
+    date: p.data.date,
+    type: 'video',
+    thumbnail: p.data.thumbnail,
+    duration: p.data.duration,
+    tags: p.data.tags,
+    youtubeId: p.data.youtube_id,
+  })),
+  ...posts.slice(0, 10).map(p => ({
+    title: p.data.title,
+    url: `/posts/${p.id}/`,
+    date: p.data.date,
+    type: 'tech',
+    thumbnail: p.data.thumbnail,
+    summary: p.data.summary,
+    tags: p.data.tags,
+  })),
+].sort((a, b) => b.date.getTime() - a.date.getTime());
+---
+
+<BaseLayout>
+  <div class="container-fluid index">
+
+    <!-- Hero Section -->
+    <div class="main content-panel" style="text-align: center; margin-bottom: 2rem;">
+      <h1 class="header author-header" itemprop="headline">aibab</h1>
+      <div class="author-text">AI Engineer | ML Specialist | Technology Innovator</div>
+      <SocialLinks />
+    </div>
+
+    <!-- Content Type Filters -->
+    <div class="content-filters">
+      <button class="filter-btn active" data-filter="all">
+        <i class="fas fa-th"></i> All
+      </button>
+      <button class="filter-btn" data-filter="kitesurf">
+        <i class="fas fa-wind"></i> Kitesurf
+      </button>
+      <button class="filter-btn" data-filter="travel">
+        <i class="fas fa-globe-americas"></i> Travel
+      </button>
+      <button class="filter-btn" data-filter="lifestyle">
+        <i class="fas fa-heart"></i> Lifestyle
+      </button>
+      <button class="filter-btn" data-filter="video">
+        <i class="fas fa-video"></i> Videos
+      </button>
+      <button class="filter-btn" data-filter="tech">
+        <i class="fas fa-code"></i> Tech
+      </button>
+    </div>
+
+    <!-- Feed Grid -->
+    <div class="feed-grid" id="feedGrid">
+      {allContent.map(item => (
+        <FeedCard {...item} />
+      ))}
+
+      {allContent.length === 0 && (
+        <p class="no-posts">No content yet. Check back soon!</p>
+      )}
+    </div>
+
+  </div>
+</BaseLayout>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const feedCards = document.querySelectorAll('.feed-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+
+      filterBtns.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      feedCards.forEach(card => {
+        const cardType = card.getAttribute('data-type');
+        if (filter === 'all' || cardType === filter) {
+          (card as HTMLElement).style.display = 'flex';
+          (card as HTMLElement).style.animation = 'fadeIn 0.5s ease-out';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+</script>

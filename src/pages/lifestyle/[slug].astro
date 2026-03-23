@@ -1,0 +1,26 @@
+---
+import GalleryLayout from '../../layouts/GalleryLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const social = await getCollection('social');
+  return social.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<GalleryLayout
+  title={post.data.title}
+  date={post.data.date}
+  location={post.data.location}
+  summary={post.data.summary}
+  tags={post.data.tags}
+  gallery={post.data.gallery}
+>
+  <Content />
+</GalleryLayout>

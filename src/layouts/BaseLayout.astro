@@ -1,0 +1,39 @@
+---
+import Head from '../components/Head.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import '../styles/modern-ux.css';
+import '../styles/instagram-feed.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  author?: string;
+  ogType?: string;
+}
+
+const { title, description, author, ogType } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <Head title={title} description={description} author={author} ogType={ogType} />
+</head>
+<body>
+  <Header />
+  <div class="page-content">
+    <div class="wrap">
+      <slot />
+    </div>
+  </div>
+  <Footer />
+
+  <script is:inline>
+    // Dark mode - runs before paint
+    const theme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+  </script>
+</body>
+</html>
